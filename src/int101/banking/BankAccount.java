@@ -48,7 +48,9 @@ public class BankAccount {
     */
     public BankAccount transferTo(BankAccount to, double amount) {
         // ToDo: add your code here
-        
+        if (to==null) return null;
+        if (withdraw(amount)==null) return null;
+        to.deposit(amount);
         return this;
     }
 
