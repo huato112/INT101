@@ -4,6 +4,7 @@ import int101.base.Person;
 import java.math.BigDecimal;
 
 public class BankAccount {
+    
     private static int nextAccountNo;
     private final int accountNo;
     private final String accountName;
@@ -22,9 +23,9 @@ public class BankAccount {
        - use "firstname lastname" of accountOwner as the accountName;
     */
     public BankAccount(Person accountOwner) {
-        this.accountOwner = accountOwner;
+//        this.accountOwner = accountOwner;
         // ToDo: add your code here
-        throw new RuntimeException(); // ** remove this line
+        this(accountOwner.getFirstname() + " " + accountOwner.getLastname(),accountOwner);
     }
     
     public BankAccount deposit(double amount) {
@@ -47,6 +48,7 @@ public class BankAccount {
     */
     public BankAccount transferTo(BankAccount to, double amount) {
         // ToDo: add your code here
+        
         return this;
     }
 
